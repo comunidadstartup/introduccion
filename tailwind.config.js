@@ -1,0 +1,8 @@
+module.exports = {
+	content: ["./pages/**/*.{js,ts,tsx}", "./components/**/*.{js,ts,tsx}"],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
+	darkMode: "class",
+};

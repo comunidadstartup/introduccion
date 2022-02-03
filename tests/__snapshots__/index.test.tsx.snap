@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Matches snaptchot 1`] = `
+<div>
+  <div
+    class="flex w-full justify-center items-center h-full"
+  >
+    <h1>
+      Hello
+    </h1>
+  </div>
+</div>
+`;
