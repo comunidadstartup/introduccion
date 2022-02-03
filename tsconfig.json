@@ -1,6 +1,9 @@
 {
 	"compilerOptions": {
-		"baseUrl": "./",
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["components/*"]
+		},
 		"target": "es2018", //es5
 		"lib": ["es2018", "dom", "dom.iterable", "esnext", "esnext.asynciterable"], //- es2018, - esnext.asynciterable
 		"allowJs": true,
@@ -17,10 +20,7 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"paths": {
-			"types": ["./@types/*"]
-		}
+		"experimentalDecorators": true
 	},
 	"files": ["./@types/global.d.ts"],
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "ormconfig.js"],
