@@ -11,4 +11,8 @@ describe("Index", () => {
 
 		expect(heading).toBeInTheDocument();
 	});
+	it("Matches snaptchot", () => {
+		const { container } = render(<Index />);
+		expect(container).toMatchSnapshot();
+	});
 });
