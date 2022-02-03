@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"target": "es2018", //es5
+		"lib": ["es2018", "dom", "dom.iterable", "esnext", "esnext.asynciterable"], //- es2018, - esnext.asynciterable
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"incremental": true,
+		"esModuleInterop": true,
+		"strictNullChecks": true,
+		"module": "esnext", //commonjs
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"paths": {
+			"types": ["./@types/*"]
+		}
+	},
+	"files": ["./@types/global.d.ts"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "ormconfig.js"],
+	"exclude": ["node_modules"]
+}
