@@ -1,7 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./theme/index.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 #__next {
@@ -15,7 +15,7 @@ body {
 }
 
 body {
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	@apply bg-white dark:bg-black text-black dark:text-white;
 	margin: 0;
@@ -129,6 +129,7 @@ h3,
 	font-size: 48px;
 	font-size: 3rem;
 	font-weight: bold;
+	line-height: 3.5rem;
 }
 
 h4,
@@ -136,6 +137,7 @@ h4,
 	font-size: 2.5rem;
 	font-size: 2.5rem;
 	font-weight: bold;
+	line-height: 3rem;
 }
 
 h5,

@@ -1,0 +1,10 @@
+.icon {
+	width: 2.5rem;
+	height: inherit;
+	overflow: hidden;
+	margin-right: 0.625rem;
+	&,
+	& > * {
+		border-radius: 0.325rem 0px 0px 0.325rem;
+	}
+}
