@@ -3,20 +3,14 @@ import React, { Component } from "react";
 
 import { toggle } from "@/components/blocks/modal/modal";
 import modalContext from "@/components/context/modal/modalContext";
-import LinkModal from "@/components/modals/links/link";
+import LinkModal, { SocialType } from "@/components/modals/links/link";
 import BotonRectangular from "@/components/button/rectangular/rectangular";
 
 interface Props {
 	title: string;
 	description: string;
 	link?: string;
-	social?: {
-		facebook: string;
-		whatsapp: string;
-		clubhouse: string;
-		discord: string;
-		twitter: string;
-	};
+	social?: SocialType;
 	button?: string;
 	type?: "head" | "plain" | "foot" | "social";
 }

@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 
 import UneteSlide from "./slides/slide";
 import Dynamic from "@/components/blocks/dynamic/dynamic";
+import { NextPageContext } from "next";
+import { SocialType } from "@/components/modals/links/link";
 
 type Props = {
 	title: string;
@@ -16,6 +18,7 @@ type Props = {
 		button: string;
 		link: string;
 	}>;
+	social?: SocialType;
 };
 
 type State = {};
@@ -24,7 +27,7 @@ SwiperCore.use([Navigation]);
 
 export default class Conocenos extends Component<Props, State> {
 	render() {
-		const { title, info } = this.props;
+		const { title, info, social } = this.props;
 		return (
 			<Dynamic classes="w-screen" variant="primary" animate={"showup"}>
 				<h2>{title}</h2>
@@ -40,13 +43,7 @@ export default class Conocenos extends Component<Props, State> {
 							title="Únete"
 							description="A la comunidad"
 							button="Ver Enlaces"
-							social={{
-								whatsapp: "www.whatsapp.com",
-								facebook: "www.facebook.com",
-								clubhouse: "www.clubhouse.com",
-								discord: "www.discord.com",
-								twitter: "www.twitter.com",
-							}}
+							social={social}
 							link="/"
 						/>
 					</SwiperSlide>

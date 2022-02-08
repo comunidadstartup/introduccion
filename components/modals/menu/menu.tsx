@@ -1,6 +1,9 @@
 import BotonRedondo from "@/components/button/redondo/redondo";
 import React, { Component } from "react";
 import { ChevronRightIcon as Back } from "@heroicons/react/outline";
+import ColorSwitch from "@/components/switch/color/colorSwitch";
+import colorContext from "@/components/context/color/colorContext";
+import colorMode from "@/components/cookies/colormode/colorMode";
 
 interface Props {
 	id: string;
@@ -12,8 +15,12 @@ interface Props {
 interface State {}
 
 export default class MenuModal extends Component<Props, State> {
+	static contextType = colorContext;
+	context: React.ContextType<typeof colorContext>;
+
 	render() {
 		const { id } = this.props;
+		const { get, set } = this.context;
 		return (
 			<div
 				id={`${id}-menu`}
@@ -43,11 +50,16 @@ export default class MenuModal extends Component<Props, State> {
 					{this.props.options.map((i) => (
 						<MenuItem value={i.key} href={i.value} />
 					))}
+					<ColorSwitch
+						mode={get}
+						onClick={() => colorMode(set)}
+					/>
 				</div>
 			</div>
 		);
 	}
 }
+MenuModal.contextType = colorContext;
 
 interface miProps {
 	value: string;

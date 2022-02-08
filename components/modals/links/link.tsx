@@ -6,6 +6,13 @@ import { capitalize } from "lodash";
 
 import BotonRedondo from "@/components/button/redondo/redondo";
 
+export interface SocialType {
+	whatsapp: string;
+	facebook: string;
+	discord: string;
+	twitter: string;
+}
+
 interface Props {
 	id: string;
 	title: string;
@@ -13,7 +20,6 @@ interface Props {
 	social: {
 		facebook: string;
 		whatsapp: string;
-		clubhouse: string;
 		discord: string;
 		twitter: string;
 	};
