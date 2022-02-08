@@ -1,0 +1,23 @@
+.swiper-x {
+	@apply w-screen h-auto;
+}
+.swiper-x .swiper-button-prev {
+	left: 5%;
+}
+.swiper-x .swiper-button-next {
+	right: 5%;
+}
+.swiper-x .swiper-button-prev,
+.swiper-x .swiper-button-next {
+	@apply bg-black/20 text-leche w-10 h-10 rounded-full;
+}
+.swiper-x .swiper-button-prev::after,
+.swiper-x .swiper-button-next::after {
+	@apply text-xl;
+}
+.swiper-x .swiper-wrapper {
+	@apply w-screen h-auto;
+}
+.swiper-x .swiper-slide {
+	@apply flex flex-col items-center justify-center h-auto min-h-screen px-32;
+}

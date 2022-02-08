@@ -1,0 +1,65 @@
+@layer base {
+	/* BOTH */
+	.block-primary > [data-block="sub"] > .right,
+	.block-secondary > [data-block="sub"] > .right {
+		@apply text-right;
+	}
+	.block-primary > [data-block="sub"] > .left,
+	.block-secondary > [data-block="sub"] > .left {
+		@apply text-left;
+	}
+	.block-primary > [data-block="sub"] > .center,
+	.block-secondary > [data-block="sub"] > .center {
+		@apply text-center;
+	}
+	.block-primary > [data-block="sub"].w80,
+	.block-secondary > [data-block="sub"].w80 {
+		@apply w-4/5;
+	}
+
+	/* PRIMARY */
+	.block-primary {
+		@apply bg-leche dark:bg-leche-oscura;
+	}
+	.block-primary > [data-block="sub"] > h1,
+	.block-primary > [data-block="sub"] > .h1,
+	.block-primary > [data-block="sub"] > h2,
+	.block-primary > [data-block="sub"] > .h2,
+	.block-primary > [data-block="sub"] > h3,
+	.block-primary > [data-block="sub"] > .h3,
+	.block-primary > [data-block="sub"] > h4,
+	.block-primary > [data-block="sub"] > .h4,
+	.block-primary > [data-block="sub"] > h5,
+	.block-primary > [data-block="sub"] > .h5,
+	.block-primary > [data-block="sub"] > h6,
+	.block-primary > [data-block="sub"] > .h6 {
+		@apply text-rojo-200 dark:text-white;
+	}
+	.block-primary > [data-block="sub"] > p,
+	.block-primary > [data-block="sub"] > .p {
+		@apply text-texto-200 dark:text-white;
+	}
+
+	/* SECONDARY */
+	.block-secondary {
+		@apply bg-rojo-200 dark:bg-rojo-oscuro-200;
+	}
+	.block-secondary > [data-block="sub"] > h1,
+	.block-secondary > [data-block="sub"] > .h1,
+	.block-secondary > [data-block="sub"] > h2,
+	.block-secondary > [data-block="sub"] > .h2,
+	.block-secondary > [data-block="sub"] > h3,
+	.block-secondary > [data-block="sub"] > .h3,
+	.block-secondary > [data-block="sub"] > h4,
+	.block-secondary > [data-block="sub"] > .h4,
+	.block-secondary > [data-block="sub"] > h5,
+	.block-secondary > [data-block="sub"] > .h5,
+	.block-secondary > [data-block="sub"] > h6,
+	.block-secondary > [data-block="sub"] > .h6 {
+		@apply text-white;
+	}
+	.block-secondary > [data-block="sub"] > p,
+	.block-secondary > [data-block="sub"] > .p {
+		@apply text-white;
+	}
+}

@@ -117,20 +117,16 @@ q {
 	quotes: none;
 }
 
-blockquote {
-	&:before,
-	&:after {
-		content: "";
-		content: none;
-	}
+blockquote:before,
+blockquote:after {
+	content: "";
+	content: none;
 }
 
-q {
-	&:before,
-	&:after {
-		content: "";
-		content: none;
-	}
+q:before,
+q:after {
+	content: "";
+	content: none;
 }
 
 table {

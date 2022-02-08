@@ -1,0 +1,27 @@
+/* PRIMARY */
+.button-primary {
+	@apply bg-white/20 dark:bg-black/20 text-white dark:text-white shadow-sm hover:shadow-md;
+}
+.button-primary > svg {
+	@apply w-6 h-6;
+}
+.button-primary.fill > svg {
+	@apply fill-texto-200;
+}
+.button-primary.stroke > svg {
+	@apply stroke-texto-200;
+}
+
+/* SECONDARY */
+.button-secondary {
+	@apply bg-black/20;
+}
+.button-secondary > svg {
+	@apply w-6 h-6;
+}
+.button-secondary.fill > svg {
+	@apply fill-white;
+}
+.button-secondary.stroke > svg {
+	@apply stroke-white;
+}
