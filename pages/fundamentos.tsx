@@ -81,7 +81,7 @@ export default function index() {
 							{
 								title: "Comunidad Startup",
 								description:
-									"Una startup para startups y por el desarrollo de las startups. Nuestra éxito es que vuestra startup alcance el éxito.",
+									"Una startup para startups y por el desarrollo de las startups. Nuestra éxito es el éxito de vuestra startup",
 								button: "Ver más",
 								link: "/inicio",
 							},
