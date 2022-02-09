@@ -1,3 +1,6 @@
+import Head from "next/head";
+import React, { useState, useEffect } from "react";
+
 import ModalContainer, { EffectsType } from "@/components/blocks/modal/modal";
 import colorContext from "@/components/context/color/colorContext";
 import modalContext from "@/components/context/modal/modalContext";
@@ -5,7 +8,7 @@ import { classer } from "@/components/cookies/colormode/colorMode";
 import animate from "@/components/functions/onscroll/animate/animate";
 import onScroll from "@/components/functions/onscroll/onscroll";
 import MainNav from "@/components/navigation/main/main";
-import React, { useState, useEffect } from "react";
+
 import FundamentosHeader from "views/fundamentos/header/header";
 import FundamentosI from "views/fundamentos/I/I";
 import FundamentosII from "views/fundamentos/II/II";
@@ -39,6 +42,17 @@ export default function index() {
 						setModal(view && effect ? { effect, view } : undefined),
 				}}
 			>
+				<Head>
+					<title>CS | Fundamentos</title>
+					<meta
+						name="description"
+						content="Metodología magra basada en el estado de las cosas para fundar iniciativas, cuya fuerza motriz no son el capital, ni los recursos sino el talento."
+					/>
+					<meta
+						name="keywords"
+						content="startup, incubadora, Incubación, metodología, desarrollo de startups, Ideas, Iniciativas, MVP, Mentoría"
+					/>
+				</Head>
 				<div className="flex flex-col w-full justify-start items-start h-auto">
 					<MainNav />
 					{modal ? (

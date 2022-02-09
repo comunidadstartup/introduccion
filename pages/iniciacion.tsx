@@ -5,6 +5,7 @@ import { classer } from "@/components/cookies/colormode/colorMode";
 import animate from "@/components/functions/onscroll/animate/animate";
 import onScroll from "@/components/functions/onscroll/onscroll";
 import MainNav from "@/components/navigation/main/main";
+import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import InitHeader from "views/iniciacion/header/header";
 import InitI from "views/iniciacion/I/I";
@@ -37,6 +38,17 @@ export default function index() {
 						setModal(view && effect ? { effect, view } : undefined),
 				}}
 			>
+				<Head>
+					<title>CS | Iniciación</title>
+					<meta
+						name="description"
+						content="Mentoría y curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente."
+					/>
+					<meta
+						name="keywords"
+						content="startup, incubadora, Incubación, metodología, desarrollo de startups, Ideas, Iniciativas, MVP, Mentoría"
+					/>
+				</Head>
 				<div className="flex flex-col w-full justify-start items-start h-auto">
 					<MainNav />
 					{modal ? (
@@ -56,7 +68,7 @@ export default function index() {
 							{
 								title: "Comunidad Startup",
 								description:
-								"Una startup para startups y por el desarrollo de las startups. Nuestra éxito es que vuestra startup alcance el éxito.",
+									"Una startup para startups y por el desarrollo de las startups. Nuestra éxito es que vuestra startup alcance el éxito.",
 								button: "Ver más",
 								link: "/",
 							},

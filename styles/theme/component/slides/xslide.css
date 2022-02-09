@@ -21,3 +21,7 @@
 .swiper-x .swiper-slide {
 	@apply flex flex-col items-center justify-center h-auto min-h-screen px-10 sm:px-32;
 }
+
+.swiper-x .swiper-slide[class*="rojo"] > span {
+	@apply text-white;
+}
