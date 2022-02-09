@@ -17,6 +17,7 @@ import InicioIII from "views/inicio/III/III";
 import InicioIV from "views/inicio/IV/IV";
 import InicioV from "views/inicio/V/V";
 import Conocenos from "views/shared/conocenos/conocenos";
+import { NextPageContext } from "next";
 
 export default function index({ social }) {
 	const [mode, setMode] = useState<"light" | "dark">(colorMode());
@@ -92,8 +93,9 @@ export default function index({ social }) {
 	);
 }
 
-index.getInitialProps = async () => {
-	const res = await fetch("http://localhost:3000/social.json");
+index.getInitialProps = async ({ req }: NextPageContext) => {
+	if (!req) return;
+	const res = await fetch(`http://${req.headers.host}/social.json`);
 	const social: SocialType = await res.json();
 	return { social };
 };
