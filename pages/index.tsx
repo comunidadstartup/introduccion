@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 
 import ModalContainer, { EffectsType } from "@/components/blocks/modal/modal";
 import modalContext from "@/components/context/modal/modalContext";
 import animate from "@/components/functions/onscroll/animate/animate";
 import onScroll from "@/components/functions/onscroll/onscroll";
 import MainNav from "@/components/navigation/main/main";
+import colorContext from "@/components/context/color/colorContext";
+import colorMode, { classer } from "@/components/cookies/colormode/colorMode";
+import { SocialType } from "@/components/modals/links/link";
 
 import InicioHeader from "views/inicio/header/header";
 import InicioI from "views/inicio/I/I";
@@ -13,9 +17,6 @@ import InicioIII from "views/inicio/III/III";
 import InicioIV from "views/inicio/IV/IV";
 import InicioV from "views/inicio/V/V";
 import Conocenos from "views/shared/conocenos/conocenos";
-import colorContext from "@/components/context/color/colorContext";
-import colorMode, { classer } from "@/components/cookies/colormode/colorMode";
-import { SocialType } from "@/components/modals/links/link";
 
 export default function index({ social }) {
 	const [mode, setMode] = useState<"light" | "dark">(colorMode());
@@ -41,6 +42,17 @@ export default function index({ social }) {
 						setModal(view && effect ? { effect, view } : undefined),
 				}}
 			>
+				<Head>
+					<title>Comunidad Startup</title>
+					<meta
+						name="description"
+						content="Una startup para startups y por el desarrollo de las startups. Nuestra éxito es que vuestra startup alcance el éxito."
+					/>
+					<meta
+						name="keywords"
+						content="startup, incubadora, Incubación, metodología, desarrollo de startups, Ideas, Iniciativas, MVP, Mentoría"
+					/>
+				</Head>
 				<div className="flex flex-col w-full justify-start items-start h-auto">
 					<MainNav />
 					{modal ? (

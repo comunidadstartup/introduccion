@@ -7,10 +7,10 @@
 		@apply flex flex-col items-start justify-between px-5 pt-5 mb-5;
 	}
 	.social > .top > h4 {
-		@apply text-4xl;
+		@apply text-4xl text-white;
 	}
 	.social > .top > p {
-		@apply text-xl;
+		@apply text-xl text-white;
 	}
 	.social > .bottom {
 		@apply flex flex-row w-full h-auto px-5 pb-5;
@@ -19,10 +19,10 @@
 		@apply flex flex-col items-start content-start px-5 pt-5 mb-5;
 	}
 	.plain > .top > h4 {
-		@apply text-2xl;
+		@apply text-2xl text-white;
 	}
 	.plain > .top > p {
-		@apply text-base;
+		@apply text-base text-white;
 	}
 	.plain > .bottom {
 		@apply flex flex-row w-full h-auto px-5 pb-5;
@@ -30,6 +30,10 @@
 
 	.foot > .top {
 		@apply flex flex-col-reverse items-start content-between px-5 pt-5 mb-5;
+	}
+	.foot > .top > h4,
+	.foot > .top > p {
+		@apply text-white;
 	}
 	.foot > .bottom {
 		@apply flex flex-row w-full h-auto px-5 pb-5;

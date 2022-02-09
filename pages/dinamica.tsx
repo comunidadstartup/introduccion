@@ -5,6 +5,7 @@ import { classer } from "@/components/cookies/colormode/colorMode";
 import animate from "@/components/functions/onscroll/animate/animate";
 import onScroll from "@/components/functions/onscroll/onscroll";
 import MainNav from "@/components/navigation/main/main";
+import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import DinamicaHeader from "views/dinamica/header/header";
 import DinamicaI from "views/dinamica/I/I";
@@ -36,6 +37,17 @@ export default function index() {
 						setModal(view && effect ? { effect, view } : undefined),
 				}}
 			>
+				<Head>
+					<title>CS | Dinámica</title>
+					<meta
+						name="description"
+						content="Proceso fundacional basado en el talento por sobre el capital y los recursos para construir."
+					/>
+					<meta
+						name="keywords"
+						content="startup, incubadora, Incubación, metodología, desarrollo de startups, Ideas, Iniciativas, MVP, Mentoría"
+					/>
+				</Head>
 				<div className="flex flex-col w-full justify-start items-start h-auto">
 					<MainNav />
 					{modal ? (
