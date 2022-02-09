@@ -14,10 +14,12 @@ module.exports = {
 
 		// Handle image imports
 		// https://jestjs.io/docs/webpack#handling-static-assets
-		"^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$": `<rootDir>/__mocks__/fileMock.js`,
+		"^.+\\.(jpg|jpeg|png|gif|webp|avif)$": `<rootDir>/__mocks__/fileMock.js`,
+		"^.+\\.svg$": "jest-svg-transformer",
 
 		// Handle module aliases
 		"^@/components/(.*)$": "<rootDir>/components/$1",
+		"^views/(.*)$": "<rootDir>/views/$1",
 	},
 	// Add more setup options before each test is run
 	// setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
