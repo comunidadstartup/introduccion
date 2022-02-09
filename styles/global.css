@@ -47,7 +47,6 @@ body {
 }
 
 body {
-	max-width: 1280px;
 	width: 100%;
 }
 
@@ -104,54 +103,37 @@ a {
 
 p,
 .p {
-	font-size: 30px;
-	font-size: 2rem;
-	font-weight: normal;
-	line-height: 3rem;
+	@apply text-base;
 }
 
 h1,
 .h1 {
-	font-size: 72px;
-	font-size: 4.5rem;
-	font-weight: bold;
+	@apply text-5xl sm:text-7xl font-bold;
 }
 
 h2,
 .h2 {
-	font-size: 64px;
-	font-size: 4rem;
-	font-weight: bold;
+	@apply text-4xl sm:text-6xl font-bold;
 }
 
 h3,
 .h3 {
-	font-size: 48px;
-	font-size: 3rem;
-	font-weight: bold;
-	line-height: 3.5rem;
+	@apply text-3xl sm:text-5xl font-bold;
 }
 
 h4,
 .h4 {
-	font-size: 2.5rem;
-	font-size: 2.5rem;
-	font-weight: bold;
-	line-height: 3rem;
+	@apply text-2xl sm:text-4xl font-bold;
 }
 
 h5,
 .h5 {
-	font-size: 30.3125rem;
-	font-size: 2.2rem;
-	font-weight: bold;
+	@apply text-xl sm:text-3xl font-bold;
 }
 
 h6,
 .h6 {
-	font-size: 32px;
-	font-size: 2rem;
-	font-weight: bold;
+	@apply text-xl sm:text-2xl font-bold;
 }
 
 h1,
@@ -167,6 +149,7 @@ h5,
 h6,
 .h6,
 p,
-.p {
-	text-align: left;
+.p,
+span {
+	@apply text-left;
 }

@@ -30,3 +30,9 @@ function colorMode(setter?: Dispatch<SetStateAction<modeType>>): any {
 }
 
 export default colorMode;
+
+export function classer(mode: modeType) {
+	const div = document.documentElement.classList;
+	div.contains("light") ? div.remove("light") : div.remove("dark");
+	div.add(mode);
+}

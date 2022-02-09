@@ -14,7 +14,7 @@ import InicioIV from "views/inicio/IV/IV";
 import InicioV from "views/inicio/V/V";
 import Conocenos from "views/shared/conocenos/conocenos";
 import colorContext from "@/components/context/color/colorContext";
-import colorMode from "@/components/cookies/colormode/colorMode";
+import colorMode, { classer } from "@/components/cookies/colormode/colorMode";
 import { SocialType } from "@/components/modals/links/link";
 
 export default function index({ social }) {
@@ -24,14 +24,8 @@ export default function index({ social }) {
 		{ effect: EffectsType; view: JSX.Element } | undefined
 	>(undefined);
 
-	function classer() {
-		const div = document.documentElement.classList;
-		div.contains("light") ? div.remove("light") : div.remove("dark");
-		div.add(mode);
-	}
-
 	useEffect(() => {
-		classer();
+		classer(mode);
 		onScroll();
 		animate();
 	});
@@ -67,7 +61,7 @@ export default function index({ social }) {
 							{
 								title: "Iniciación",
 								description:
-									"Curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente.",
+									"Mentoría y curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente.",
 								button: "Ver más",
 								link: "/iniciacion",
 							},

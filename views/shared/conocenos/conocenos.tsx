@@ -29,11 +29,13 @@ export default class Conocenos extends Component<Props, State> {
 	render() {
 		const { title, info, social } = this.props;
 		return (
-			<Dynamic classes="w-screen" variant="primary" animate={"showup"}>
-				<h2>{title}</h2>
+			<Dynamic classes="full" variant="primary" animate={"showup"}>
+				<h2 style={{ textAlign: "center" }} className="w-full">
+					{title}
+				</h2>
 				<Swiper
 					slidesPerView={"auto"}
-					spaceBetween={30}
+					// spaceBetween={30}
 					navigation={true}
 					className={"swiper-conocenos"}
 				>

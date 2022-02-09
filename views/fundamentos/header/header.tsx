@@ -14,11 +14,15 @@ export default class FundamentosHeader extends Component {
 				<div
 					className={"flex flex-row items-center justify-center w-auto h-auto"}
 				>
-					<div className={styles.icon}>
-					</div>
+					<div className={styles.icon}></div>
 					<h1 className="text-white">Fundamentos</h1>
 				</div>
-				<div className="flex flex-row py-3 align-center justify-center w-full h-auto">
+				<div
+					className={[
+						"flex align-center justify-center w-full h-auto",
+						styles.options,
+					].join(" ")}
+				>
 					<BotonRectangular variant="primary" link="/" title="Inicio" />
 					<BotonRectangular
 						variant="primary"

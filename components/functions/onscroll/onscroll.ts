@@ -6,7 +6,6 @@
 // When scroll value is bottom end progress
 // Before scroll value beyond bottom, let absolute and percentage attribute
 
-import relrange from "../relrange";
 import relpercent from "../relpercent";
 import relvalue from "../relvalue";
 
@@ -51,13 +50,12 @@ function onscroll() {
 			itemData({ parent: i, child }, "static", undefined, i.clientHeight, 0);
 			/* View is below item's end */
 		} else if (viewBottom < end) {
-			const percent = relrange(relpercent(viewBottom, begin, end), 50, 100);
-			// console.log(percent);
+			const percent = relpercent(viewBottom, begin, end);
 			let adjust = child.clientHeight - innerHeight;
 			itemData(
 				{ parent: i, child },
 				"fixed",
-				relativeHeight(i, relvalue(percent, begin, adjust), 0),
+				0,
 				i.clientHeight,
 				percent
 			);

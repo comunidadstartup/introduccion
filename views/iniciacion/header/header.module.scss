@@ -1,3 +1,28 @@
 .icon {
 	@apply w-16 h-16 mr-4 rounded-lg bg-[url('/media/logo-small-light.svg')] dark:bg-[url('/media/logo-small-dark.svg')];
 }
+
+.options {
+	padding-top: 2rem;
+	flex-direction: column;
+	& > a,
+	a > button {
+		margin-bottom: 0.75rem;
+		&:last {
+			margin-bottom: unset;
+		}
+	}
+}
+
+@media (min-width: 640px) {
+	.options {
+		flex-direction: row;
+		& > a,
+		a > button {
+			margin-right: 0.75rem;
+			&:last {
+				margin-right: unset;
+			}
+		}
+	}
+}

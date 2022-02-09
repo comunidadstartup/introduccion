@@ -6,10 +6,10 @@
 	@apply w-6 h-6;
 }
 .button-primary.fill > svg {
-	@apply fill-texto-200;
+	@apply fill-white;
 }
 .button-primary.stroke > svg {
-	@apply stroke-texto-200;
+	@apply stroke-white;
 }
 
 /* SECONDARY */
@@ -23,5 +23,19 @@
 	@apply fill-white;
 }
 .button-secondary.stroke > svg {
+	@apply stroke-white;
+}
+
+/* SECONDARY */
+.button-tertiary {
+	@apply bg-rojo-200 dark:bg-rojo-oscuro-200;
+}
+.button-tertiary > svg {
+	@apply w-6 h-6;
+}
+.button-tertiary.fill > svg {
+	@apply fill-white;
+}
+.button-tertiary.stroke > svg {
 	@apply stroke-white;
 }

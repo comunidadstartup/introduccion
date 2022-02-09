@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class FundamentosIV extends Component {
 	render() {
 		return (
-			<Dynamic classes="w80" variant="primary" animate="showup">
+			<Dynamic variant="primary" animate="showup">
 				<span style={{ marginBottom: "20vh" }} className="h6 w-full">
 					Aprendizaje Resolutivo
 				</span>

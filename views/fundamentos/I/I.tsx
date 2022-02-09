@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class FundamentosI extends Component {
 	render() {
 		return (
-			<Dynamic classes="w80" variant="primary" animate="showup">
+			<Dynamic variant="primary" animate="showup">
 				<span style={{ marginBottom: "2rem" }} className="h2">
 					Es difícil encontrar a un socio ideal para co-fundar un emprendimiento
 				</span>

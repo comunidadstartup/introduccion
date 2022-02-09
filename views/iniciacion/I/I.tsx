@@ -16,7 +16,7 @@ import Dynamic from "@/components/blocks/dynamic/dynamic";
 export default class InitI extends Component {
 	render() {
 		return (
-			<Dynamic variant="primary" animate="showup">
+			<Dynamic classes="full" variant="primary" animate="showup">
 				<Swiper
 					pagination={{
 						clickable: true,
@@ -36,7 +36,7 @@ export default class InitI extends Component {
 						</span>
 						<span className="h5 w-full">Es decir, de mentalidad.</span>
 					</SwiperSlide>
-					<SwiperSlide className="bg-rojo-200 dark:bg-rojo-oscuro-200">
+					<SwiperSlide className="bg-rojo-200 dark:bg-rojo-oscuro-200 py-20">
 						<span
 							style={{ marginBottom: "2rem", fontWeight: "500" }}
 							className="h5"

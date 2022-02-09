@@ -16,7 +16,7 @@ import Dynamic from "@/components/blocks/dynamic/dynamic";
 export default class InitIV extends Component {
 	render() {
 		return (
-			<Dynamic variant="primary" animate="showup">
+			<Dynamic classes="full" variant="primary" animate="showup">
 				<Swiper
 					pagination={{
 						clickable: true,
@@ -36,11 +36,8 @@ export default class InitIV extends Component {
 							aventura.
 						</span>
 					</SwiperSlide>
-					<SwiperSlide className="bg-rojo-200 dark:bg-rojo-oscuro-200">
-						<span
-							style={{ marginBottom: "2rem", lineHeight: "3rem" }}
-							className="h5"
-						>
+					<SwiperSlide className="bg-rojo-200 dark:bg-rojo-oscuro-200 py-20">
+						<span style={{ marginBottom: "2rem" }} className="h5">
 							Por eso compartiremos un compendio de errores que hemos cometido,
 							las acciones que más nos han favorecido, las herramientas que más
 							nos han facilitado el camino, y sin limitarnos, guías para lograr

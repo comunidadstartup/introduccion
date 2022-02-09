@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class InicioIII extends Component {
 	render() {
 		return (
-			<Dynamic classes="w80" variant="primary" animate="showup">
+			<Dynamic variant="primary" animate="showup">
 				<span style={{ marginBottom: "2rem" }} className="h5 w-full">
 					Comunidad Startup apuesta por el emprendedurismo.
 				</span>

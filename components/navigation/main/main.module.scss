@@ -1,6 +1,39 @@
 .icon {
-    & > svg {
-        width: 40px;
-        height: 40px;
-    }
+	& > svg {
+		width: 40px;
+		height: 40px;
+		& rect {
+			@apply fill-rojo-200;
+		}
+		& path {
+			@apply fill-white;
+		}
+	}
+}
+
+html[class="dark"] {
+	.icon {
+		& > svg {
+			& rect {
+				@apply fill-rojo-oscuro-200;
+			}
+			& path {
+				@apply fill-white;
+			}
+		}
+	}
+}
+@media (prefers-color-scheme: dark) {
+	html[class="dark"] {
+		.icon {
+			& > svg {
+				& rect {
+					@apply fill-rojo-oscuro-200;
+				}
+				& path {
+					@apply fill-white;
+				}
+			}
+		}
+	}
 }

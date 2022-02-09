@@ -11,7 +11,7 @@ interface State {}
 
 export default class BotonRectangular extends Component<Props, State> {
 	styles(variant: Props["variant"]) {
-		return `flex items-center justify-center w-auto h-auto rounded-md px-6 py-3 
+		return `flex items-center justify-center w-full text-base sm:w-auto h-auto rounded-md px-6 py-3 
     opacity-75 transition-all hover:opacity-100 hover:scale-105 mr-3 last:mr-0
     button-${variant}`;
 	}

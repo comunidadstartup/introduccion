@@ -1,5 +1,7 @@
 import ModalContainer, { EffectsType } from "@/components/blocks/modal/modal";
+import colorContext from "@/components/context/color/colorContext";
 import modalContext from "@/components/context/modal/modalContext";
+import { classer } from "@/components/cookies/colormode/colorMode";
 import animate from "@/components/functions/onscroll/animate/animate";
 import onScroll from "@/components/functions/onscroll/onscroll";
 import MainNav from "@/components/navigation/main/main";
@@ -21,61 +23,65 @@ export default function index() {
 	>(undefined);
 
 	useEffect(() => {
-		document.querySelector("html")?.classList.add(mode);
+		classer(mode);
 		onScroll();
 		animate();
 	});
 
 	return (
-		<modalContext.Provider
-			value={{
-				get: modal,
-				set: (effect, view) =>
-					setModal(view && effect ? { effect, view } : undefined),
-			}}
+		<colorContext.Provider
+			value={{ get: mode, set: (value) => setMode(value) }}
 		>
-			<div className="flex flex-col w-full justify-start items-start h-auto">
-				<MainNav />
-				{modal ? (
-					<ModalContainer effect={modal.effect}>{modal.view}</ModalContainer>
-				) : (
-					<></>
-				)}
-				<FundamentosHeader />
-				<FundamentosI />
-				<FundamentosII />
-				<FundamentosIII />
-				<FundamentosIV />
-				<FundamentosV />
-				<FundamentosVI />
-				<FundamentosVII />
-				<Conocenos
-					title="Conocé cómo vos también"
-					info={[
-						{
-							title: "Iniciación",
-							description:
-								"Curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente.",
-							button: "Ver más",
-							link: "/iniciacion",
-						},
-						{
-							title: "Comunidad Startup",
-							description:
-								"Una startup para startups y por el desarrollo de las startups. Nuestra meta es que vuestra startup alcance el éxito.",
-							button: "Ver más",
-							link: "/inicio",
-						},
-						{
-							title: "Dinámica",
-							description:
-								"Proceso fundacional basado en el talento por sobre el capital y los recursos para construir.",
-							button: "Ver más",
-							link: "/dinamica",
-						},
-					]}
-				/>
-			</div>
-		</modalContext.Provider>
+			<modalContext.Provider
+				value={{
+					get: modal,
+					set: (effect, view) =>
+						setModal(view && effect ? { effect, view } : undefined),
+				}}
+			>
+				<div className="flex flex-col w-full justify-start items-start h-auto">
+					<MainNav />
+					{modal ? (
+						<ModalContainer effect={modal.effect}>{modal.view}</ModalContainer>
+					) : (
+						<></>
+					)}
+					<FundamentosHeader />
+					<FundamentosI />
+					<FundamentosII />
+					<FundamentosIII />
+					<FundamentosIV />
+					<FundamentosV />
+					<FundamentosVI />
+					<FundamentosVII />
+					<Conocenos
+						title="Conocé más"
+						info={[
+							{
+								title: "Iniciación",
+								description:
+									"Curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente.",
+								button: "Ver más",
+								link: "/iniciacion",
+							},
+							{
+								title: "Comunidad Startup",
+								description:
+									"Una startup para startups y por el desarrollo de las startups. Nuestra éxito es que vuestra startup alcance el éxito.",
+								button: "Ver más",
+								link: "/inicio",
+							},
+							{
+								title: "Dinámica",
+								description:
+									"Proceso fundacional basado en el talento por sobre el capital y los recursos para construir.",
+								button: "Ver más",
+								link: "/dinamica",
+							},
+						]}
+					/>
+				</div>
+			</modalContext.Provider>
+		</colorContext.Provider>
 	);
 }

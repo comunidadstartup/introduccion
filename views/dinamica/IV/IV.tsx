@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class DinamicaIV extends Component {
 	render() {
 		return (
-			<Dynamic classes="w80" variant="secondary" animate="showup">
+			<Dynamic variant="secondary" animate="showup">
 				<span style={{ marginBottom: "2rem" }} className="h4">
 					Una vez decidida la vacante, se entrará en una etapa de adquisición de
 					derechos (vesting) acordada.

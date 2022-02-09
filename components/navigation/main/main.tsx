@@ -28,51 +28,58 @@ export default class MainNav extends Component {
 			<div
 				id="mainav"
 				className={
-					"fixed top-0 left-0 z-[99] flex flex-row items-center justify-between max-w-7xl w-full py-3 px-6 transition-all bg-gray-200/20 backdrop-blur-md"
+					"fixed top-0 left-0 z-[99] flex flex-row items-center justify-center w-full transition-all bg-gray-200/20 backdrop-blur-md"
 				}
 			>
-				<a
-					href="/"
-					className={["flex items-center justify-center", styles.icon].join(
-						" "
-					)}
-				>
-					<Logo />
-				</a>
-				<BotonRedondo
-					variant="primary"
-					onClick={() =>
-						this.context.set(
-							"slideleft",
-							<MenuModal
-								id="mainmenu"
-								title="Menu"
-								close={() => {
-									toggle(false, "slideleft");
-									setTimeout(() => {
-										this.context.set(undefined);
-									}, 500);
-								}}
-								options={[
-									{
-										key: "Inicio",
-										value: "/",
-									},
-									{
-										key: "Fundamentos",
-										value: "/fundamentos",
-									},
-									{
-										key: "Dinámica",
-										value: "/dinamica",
-									},
-								]}
-							></MenuModal>
-						)
-					}
-				>
-					<Menu />
-				</BotonRedondo>
+				<div className="flex flex-row items-center justify-between w-full max-w-7xl py-3 px-6">
+					<a
+						href="/"
+						className={["flex items-center justify-center", styles.icon].join(
+							" "
+						)}
+					>
+						<Logo />
+					</a>
+					<BotonRedondo
+						variant="tertiary"
+						svg="stroke"
+						onClick={() =>
+							this.context.set(
+								"slideleft",
+								<MenuModal
+									id="mainmenu"
+									title="Menu"
+									close={() => {
+										toggle(false, "slideleft");
+										setTimeout(() => {
+											this.context.set(undefined);
+										}, 500);
+									}}
+									options={[
+										{
+											key: "Inicio",
+											value: "/",
+										},
+										{
+											key: "Iniciación",
+											value: "/iniciacion",
+										},
+										{
+											key: "Fundamentos",
+											value: "/fundamentos",
+										},
+										{
+											key: "Dinámica",
+											value: "/dinamica",
+										},
+									]}
+								/>
+							)
+						}
+					>
+						<Menu />
+					</BotonRedondo>
+				</div>
 			</div>
 		);
 	}

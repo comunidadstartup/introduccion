@@ -16,7 +16,7 @@ import Dynamic from "@/components/blocks/dynamic/dynamic";
 export default class InitIII extends Component {
 	render() {
 		return (
-			<Dynamic variant="primary" animate="showup">
+			<Dynamic classes="full" variant="primary" animate="showup">
 				<Swiper
 					pagination={{
 						clickable: true,
@@ -36,8 +36,8 @@ export default class InitIII extends Component {
 							acción acciones.
 						</span>
 					</SwiperSlide>
-					<SwiperSlide className="bg-rojo-200 dark:bg-rojo-oscuro-200">
-						<span style={{ lineHeight: "3rem" }} className="h5">
+					<SwiperSlide className="bg-rojo-200 dark:bg-rojo-oscuro-200 py-20">
+						<span className="h5">
 							Un emprendedor debe tener las capacidades de ejecutar sus ideas.
 							Por esto, iniciaremos a los emprendedores con el conocimiento
 							técnico esencial para comenzar a ejecutar e idealmente llevar a

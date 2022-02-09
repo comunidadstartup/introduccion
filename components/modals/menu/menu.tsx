@@ -37,7 +37,7 @@ export default class MenuModal extends Component<Props, State> {
 						{this.props.title}
 					</div>
 					<div className={"w-auto h-auto"}>
-						<BotonRedondo variant="primary" onClick={this.props.close}>
+						<BotonRedondo svg="stroke" variant="primary" onClick={this.props.close}>
 							<Back />
 						</BotonRedondo>
 					</div>

@@ -4,7 +4,7 @@ import Dynamic from "@/components/blocks/dynamic/dynamic";
 export default class FundamentosIII extends Component {
 	render() {
 		return (
-			<Dynamic classes="w80" variant="primary" animate="showup">
+			<Dynamic variant="primary" animate="showup">
 				<span style={{ marginBottom: "20vh" }} className="h6 w-full">
 					Aprendizaje Práctico
 				</span>

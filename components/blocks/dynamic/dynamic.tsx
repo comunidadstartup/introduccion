@@ -23,14 +23,14 @@ export default class Dynamic extends Component<Props, State> {
 			<div
 				data-block="main"
 				data-scroll={true}
-				className={`h-[200vh] w-full flex items-start justify-center block-${variant}`}
+				className={`min-h-[200vh] w-full h-auto flex items-start justify-center block-${variant}`}
 			>
 				<div
 					data-block="sub"
 					data-animate={animate}
 					data-params={JSON.stringify(params)}
 					data-range={JSON.stringify(range)}
-					className={`flex flex-col items-center justify-center min-h-screen h-auto ${classes}`}
+					className={`flex flex-col w-full max-w-7xl items-center justify-center min-h-screen h-auto ${classes}`}
 				>
 					{this.props.children}
 				</div>

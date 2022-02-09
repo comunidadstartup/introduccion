@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class FundamentosII extends Component {
 	render() {
 		return (
-			<Dynamic classes="w80" variant="primary" animate="showup">
+			<Dynamic variant="primary" animate="showup">
 				<span className="h3">
 					Esta es una metodología de crecimiento que se vale del mutualismo para
 					construir

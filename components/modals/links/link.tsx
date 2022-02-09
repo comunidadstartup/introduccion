@@ -7,7 +7,6 @@ import { capitalize } from "lodash";
 import BotonRedondo from "@/components/button/redondo/redondo";
 
 export interface SocialType {
-	whatsapp: string;
 	facebook: string;
 	discord: string;
 	twitter: string;
@@ -17,12 +16,7 @@ interface Props {
 	id: string;
 	title: string;
 	description: string;
-	social: {
-		facebook: string;
-		whatsapp: string;
-		discord: string;
-		twitter: string;
-	};
+	social: SocialType;
 	close: React.MouseEventHandler;
 }
 
@@ -56,7 +50,11 @@ export default class LinkModal extends Component<Props, State> {
 							{title}
 						</span>
 						<div style={{ flex: "0 0 auto" }} className={"w-auto h-auto"}>
-							<BotonRedondo variant="primary" onClick={this.props.close}>
+							<BotonRedondo
+								svg="stroke"
+								variant="tertiary"
+								onClick={this.props.close}
+							>
 								<Close />
 							</BotonRedondo>
 						</div>
@@ -118,7 +116,7 @@ class Item extends Component<ItemProps, ItemState> {
 				</div>
 				<div className={"w-auto h-full"}>
 					<a
-						className="flex flex-row items-center justify-center w-auto h-full bg-rojo-200 text-white opacity-80 hover:opacity-100 transition-all px-4 rounded-r-md mb-3 last:mb-0"
+						className="flex flex-row items-center justify-center w-auto h-full bg-rojo-200 dark:bg-rojo-oscuro-200 text-white opacity-80 hover:opacity-100 transition-all px-4 rounded-r-md mb-3 last:mb-0"
 						href={`https://${this.props.link}`}
 					>
 						Unirme
