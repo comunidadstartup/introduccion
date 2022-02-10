@@ -6,9 +6,8 @@ export default class InicioIV extends Component {
 		return (
 			<Dynamic variant="primary" animate="showup">
 				<span className="h3">
-					Comunidad Startup comenzo a desarrollar una metodología de
-					crecimiento, que es la misma con la que se ha impulsado y se seguirá
-					impulsando.
+					Y en base a nuestra metodología, queremos ayudarte a crecer, porque
+					nosotros crecemos ayudando a otros a crecer.
 				</span>
 			</Dynamic>
 		);

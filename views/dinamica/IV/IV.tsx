@@ -9,8 +9,8 @@ export default class DinamicaIV extends Component {
 					Una vez decidida la vacante, se entrará en una etapa de adquisición de
 					derechos (vesting) acordada.
 				</span>
-				<span className="p">
-					Y durante esta etapa seguidas siendo instruido, seguiras creciendo,
+				<span className="text-2xl text-white w-full">
+					Y durante esta etapa seguirás siendo instruido, seguirás creciendo,
 					aportando y demostrando tus capacidades hasta adquirir la totalidad de
 					los derechos del emprendimiento como socio o cofundador.
 				</span>

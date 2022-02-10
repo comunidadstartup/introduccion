@@ -11,11 +11,10 @@ import colorMode, { classer } from "@/components/cookies/colormode/colorMode";
 import { SocialType } from "@/components/modals/links/link";
 
 import InicioHeader from "views/inicio/header/header";
-import InicioI from "views/inicio/I/I";
-import InicioII from "views/inicio/II/II";
-import InicioIII from "views/inicio/III/III";
-import InicioIV from "views/inicio/IV/IV";
-import InicioV from "views/inicio/V/V";
+import InicioI from "views/inicio/I";
+import InicioII from "views/inicio/II";
+import InicioIII from "views/inicio/III";
+import InicioIV from "views/inicio/IV";
 import Conocenos from "views/shared/conocenos/conocenos";
 import { NextPageContext } from "next";
 
@@ -66,7 +65,6 @@ export default function index({ social }) {
 					<InicioII />
 					<InicioIII />
 					<InicioIV />
-					<InicioV />
 					<Conocenos
 						title="Conocé cómo vos también"
 						social={social}
@@ -79,7 +77,7 @@ export default function index({ social }) {
 								link: "/iniciacion",
 							},
 							{
-								title: "Curso",
+								title: "Metodología Cofundar",
 								description:
 									"Metodología magra basada en el estado de las cosas para fundar iniciativas, cuya fuerza motriz no son el capital, ni los recursos sino el talento.",
 								button: "Ver más",
