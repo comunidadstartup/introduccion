@@ -5,14 +5,14 @@ import React, { Component } from "react";
 export default class DinamicaII extends Component {
 	render() {
 		return (
-			<Dynamic variant="primary" animate="showup">
+			<Dynamic classes="full" variant="primary" animate="showup">
 				<h2
-					style={{ padding: "0px 5%", marginBottom: "2rem" }}
+					style={{ padding: "0px 2.5rem", marginBottom: "2rem" }}
 					className="w-full"
 				>
 					Cursante
 				</h2>
-				<p style={{ padding: "0px 5%" }} className="w-full">
+				<p style={{ padding: "0px 2.5rem" }} className="w-full">
 					¿Deseás aprender o desarrollarte profesionalmente pero no encuentras
 					la motivación ni la oportunidad? ¿Deseas solo invertir tu talento?
 				</p>

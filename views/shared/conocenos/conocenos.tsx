@@ -46,7 +46,6 @@ export default class Conocenos extends Component<Props, State> {
 							description="A la comunidad"
 							button="Ver Enlaces"
 							social={social}
-							link="/"
 						/>
 					</SwiperSlide>
 					{info.map((i, x) => {

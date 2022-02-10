@@ -1,3 +1,7 @@
+#mainnav {
+	will-change: top, translateY;
+}
+
 .icon {
 	& > svg {
 		width: 40px;

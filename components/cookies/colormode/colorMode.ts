@@ -6,7 +6,7 @@
 // IF setter
 // -- Check Cookie value and toggle the opposite mode
 
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import Cookies from "js-cookie";
 
 type modeType = "light" | "dark";
@@ -22,9 +22,9 @@ function colorMode(setter?: Dispatch<SetStateAction<modeType>>): any {
 	if (setter) {
 		cookie = cookie == "light" ? "dark" : "light";
 		setter(cookie);
-		Cookies.set("colorMode", cookie);
+		Cookies.set("colorMode", cookie, { path: "/" });
 	} else {
-		Cookies.set("colorMode", cookie);
+		Cookies.set("colorMode", cookie, { path: "/" });
 		return cookie;
 	}
 }
