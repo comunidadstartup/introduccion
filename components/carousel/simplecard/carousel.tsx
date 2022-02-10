@@ -18,13 +18,12 @@ export default class SimpleCardCarousel extends Component<Props, State> {
 		return (
 			<Swiper
 				slidesPerView={"auto"}
-				spaceBetween={30}
 				navigation={true}
 				modules={[Navigation]}
 				className="swiper-conocenos"
 			>
 				{items.map((i) => (
-					<SwiperSlide className="p-10">
+					<SwiperSlide className="p-10 mr-10">
 						<p className="text-xl">{i}</p>
 					</SwiperSlide>
 				))}

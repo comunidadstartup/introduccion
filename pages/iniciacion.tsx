@@ -4,7 +4,9 @@ import modalContext from "@/components/context/modal/modalContext";
 import { classer } from "@/components/cookies/colormode/colorMode";
 import animate from "@/components/functions/onscroll/animate/animate";
 import onScroll from "@/components/functions/onscroll/onscroll";
+import { SocialType } from "@/components/modals/links/link";
 import MainNav from "@/components/navigation/main/main";
+import { NextPageContext } from "next";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import InitHeader from "views/iniciacion/header/header";
@@ -15,7 +17,7 @@ import InitIntro from "views/iniciacion/intro/intro";
 import InitIV from "views/iniciacion/IV/IV";
 import Conocenos from "views/shared/conocenos/conocenos";
 
-export default function index() {
+export default function index({ social }) {
 	const [mode, setMode] = useState<"light" | "dark">("dark");
 	const [modal, setModal] = useState<
 		{ effect: EffectsType; view: JSX.Element } | undefined
@@ -64,6 +66,7 @@ export default function index() {
 					<InitIV />
 					<Conocenos
 						title="Conocé más"
+						social={social}
 						info={[
 							{
 								title: "Comunidad Startup",
@@ -86,3 +89,10 @@ export default function index() {
 		</colorContext.Provider>
 	);
 }
+
+index.getInitialProps = async ({ req }: NextPageContext) => {
+	if (!req) return;
+	const res = await fetch(`http://${req.headers.host}/social.json`);
+	const social: SocialType = await res.json();
+	return { social };
+};

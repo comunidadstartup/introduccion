@@ -51,14 +51,7 @@ function onscroll() {
 			/* View is below item's end */
 		} else if (viewBottom < end) {
 			const percent = relpercent(viewBottom, begin, end);
-			let adjust = child.clientHeight - innerHeight;
-			itemData(
-				{ parent: i, child },
-				"fixed",
-				0,
-				i.clientHeight,
-				percent
-			);
+			itemData({ parent: i, child }, "fixed", 0, i.clientHeight, percent);
 		}
 	});
 }

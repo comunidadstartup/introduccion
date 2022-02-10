@@ -26,6 +26,7 @@ export default class Dynamic extends Component<Props, State> {
 				className={`min-h-[200vh] w-full h-auto flex items-start justify-center block-${variant}`}
 			>
 				<div
+					style={{ willChange: "top, translateY, position" }}
 					data-block="sub"
 					data-animate={animate}
 					data-params={JSON.stringify(params)}

@@ -18,8 +18,10 @@ import FundamentosV from "views/fundamentos/V/V";
 import FundamentosVI from "views/fundamentos/VI/VI";
 import FundamentosVII from "views/fundamentos/VII/VII";
 import Conocenos from "views/shared/conocenos/conocenos";
+import { NextPageContext } from "next";
+import { SocialType } from "@/components/modals/links/link";
 
-export default function index() {
+export default function index({ social }) {
 	const [mode, setMode] = useState<"light" | "dark">("light");
 	const [modal, setModal] = useState<
 		{ effect: EffectsType; view: JSX.Element } | undefined
@@ -70,6 +72,7 @@ export default function index() {
 					<FundamentosVII />
 					<Conocenos
 						title="Conocé más"
+						social={social}
 						info={[
 							{
 								title: "Iniciación",
@@ -99,3 +102,10 @@ export default function index() {
 		</colorContext.Provider>
 	);
 }
+
+index.getInitialProps = async ({ req }: NextPageContext) => {
+	if (!req) return;
+	const res = await fetch(`http://${req.headers.host}/social.json`);
+	const social: SocialType = await res.json();
+	return { social };
+};

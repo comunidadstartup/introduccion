@@ -1,6 +1,9 @@
-import BotonRedondo from "@/components/button/redondo/redondo";
 import React, { Component } from "react";
+import Link from "next/link";
+
 import { ChevronRightIcon as Back } from "@heroicons/react/outline";
+
+import BotonRedondo from "@/components/button/redondo/redondo";
 import ColorSwitch from "@/components/switch/color/colorSwitch";
 import colorContext from "@/components/context/color/colorContext";
 import colorMode from "@/components/cookies/colormode/colorMode";
@@ -37,7 +40,11 @@ export default class MenuModal extends Component<Props, State> {
 						{this.props.title}
 					</div>
 					<div className={"w-auto h-auto"}>
-						<BotonRedondo svg="stroke" variant="primary" onClick={this.props.close}>
+						<BotonRedondo
+							svg="stroke"
+							variant="primary"
+							onClick={this.props.close}
+						>
 							<Back />
 						</BotonRedondo>
 					</div>
@@ -50,10 +57,7 @@ export default class MenuModal extends Component<Props, State> {
 					{this.props.options.map((i) => (
 						<MenuItem value={i.key} href={i.value} />
 					))}
-					<ColorSwitch
-						mode={get}
-						onClick={() => colorMode(set)}
-					/>
+					<ColorSwitch mode={get} onClick={() => colorMode(set)} />
 				</div>
 			</div>
 		);
