@@ -10,7 +10,7 @@ export default class DinamicaIII extends Component {
 					mediante esta se le evaluará. No habrá ningún compromiso por ninguna
 					parte.
 				</span>
-				<span className="p">
+				<span className="text-2xl text-white w-full">
 					Cuando alguno de las partes no sienta que se le ha cumplido su
 					expectativa puede decidir terminar el curso
 				</span>

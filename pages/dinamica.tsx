@@ -74,7 +74,7 @@ export default function index({ social }) {
 								link: "/",
 							},
 							{
-								title: "Fundamentos",
+								title: "Fundamentos | Cofundar",
 								description:
 									"Metodología magra basada en el estado de las cosas para fundar iniciativas, cuya fuerza motriz no son el capital, ni los recursos sino el talento.",
 								button: "Ver más",

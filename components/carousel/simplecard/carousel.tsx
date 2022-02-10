@@ -22,8 +22,8 @@ export default class SimpleCardCarousel extends Component<Props, State> {
 				modules={[Navigation]}
 				className="swiper-conocenos"
 			>
-				{items.map((i) => (
-					<SwiperSlide className="p-10 mr-10">
+				{items.map((i, x) => (
+					<SwiperSlide key={x} className="p-10 mr-10">
 						<p className="text-xl">{i}</p>
 					</SwiperSlide>
 				))}

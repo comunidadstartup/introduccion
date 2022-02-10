@@ -10,13 +10,13 @@ import onScroll from "@/components/functions/onscroll/onscroll";
 import MainNav from "@/components/navigation/main/main";
 
 import FundamentosHeader from "views/fundamentos/header/header";
-import FundamentosI from "views/fundamentos/I/I";
-import FundamentosII from "views/fundamentos/II/II";
-import FundamentosIII from "views/fundamentos/III/III";
-import FundamentosIV from "views/fundamentos/IV/IV";
-import FundamentosV from "views/fundamentos/V/V";
-import FundamentosVI from "views/fundamentos/VI/VI";
-import FundamentosVII from "views/fundamentos/VII/VII";
+import FundamentosI from "views/fundamentos/I";
+import FundamentosII from "views/fundamentos/II";
+import FundamentosIII from "views/fundamentos/III";
+import FundamentosIV from "views/fundamentos/IV";
+import FundamentosV from "views/fundamentos/V";
+import FundamentosVI from "views/fundamentos/VI";
+import FundamentosVII from "views/fundamentos/VII";
 import Conocenos from "views/shared/conocenos/conocenos";
 import { NextPageContext } from "next";
 import { SocialType } from "@/components/modals/links/link";
@@ -75,6 +75,13 @@ export default function index({ social }) {
 						social={social}
 						info={[
 							{
+								title: "Comunidad Startup",
+								description:
+									"Una startup para startups y por el desarrollo de las startups. Nuestro éxito es el éxito de vuestra startup",
+								button: "Ver más",
+								link: "/",
+							},
+							{
 								title: "Iniciación",
 								description:
 									"Curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente.",
@@ -82,14 +89,7 @@ export default function index({ social }) {
 								link: "/iniciacion",
 							},
 							{
-								title: "Comunidad Startup",
-								description:
-									"Una startup para startups y por el desarrollo de las startups. Nuestro éxito es el éxito de vuestra startup",
-								button: "Ver más",
-								link: "/inicio",
-							},
-							{
-								title: "Dinámica",
+								title: "Dinámica | Cofundar",
 								description:
 									"Proceso fundacional basado en el talento por sobre el capital y los recursos para construir.",
 								button: "Ver más",

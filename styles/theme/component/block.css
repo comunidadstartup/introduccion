@@ -41,7 +41,7 @@
 	}
 	.block-primary > [data-block="sub"] p,
 	.block-primary > [data-block="sub"] .p {
-		@apply text-texto-200 dark:text-white;
+		@apply text-texto-100 dark:text-white;
 	}
 
 	/* SECONDARY */

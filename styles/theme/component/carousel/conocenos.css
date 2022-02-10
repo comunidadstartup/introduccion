@@ -1,5 +1,5 @@
 .swiper.swiper-conocenos {
-	@apply mt-20 h-auto;
+	@apply py-20 h-auto;
 }
 .swiper.swiper-conocenos .swiper-button-prev {
 	left: 5%;
@@ -23,6 +23,9 @@
 	width: calc(100vw - 5rem);
 	@apply rounded-xl bg-rojo-200 dark:bg-rojo-oscuro-200 text-white;
 	box-shadow: -2px 2px 0.3125rem 1px rgba(0, 0, 0, 0.2);
+}
+.swiper.swiper-conocenos .swiper-slide p {
+	@apply text-white;
 }
 
 @media (min-width: 640px) {

@@ -7,14 +7,14 @@ export default class DinamicaI extends Component {
 		return (
 			<Dynamic classes="full" variant="primary" animate="showup">
 				<h2
-					style={{ padding: "0px 2.5rem", marginBottom: "2rem" }}
+					style={{ padding: "0px 5%", marginBottom: "2rem" }}
 					className="w-full"
 				>
 					Emprendedor
 				</h2>
 				<p
-					style={{ padding: "0px 2.5rem", marginBottom: "2rem" }}
-					className="w-full"
+					style={{ padding: "0px 5%", marginBottom: "2rem" }}
+					className="text-2xl w-full"
 				>
 					¿Tenés ideas pero no tenés el equipo para llevarlas acabo?
 				</p>
