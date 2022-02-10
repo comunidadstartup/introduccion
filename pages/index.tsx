@@ -46,7 +46,7 @@ export default function index({ social }) {
 					<title>Comunidad Startup</title>
 					<meta
 						name="description"
-						content="Una startup para startups y por el desarrollo de las startups. Nuestro éxito es el éxito de vuestra startup"
+            content="Una startup para startups y por el desarrollo de las startups. Nuestro éxito es el éxito de vuestra startup"
 					/>
 					<meta
 						name="keywords"

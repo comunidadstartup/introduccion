@@ -70,8 +70,7 @@ export default function index({ social }) {
 						info={[
 							{
 								title: "Comunidad Startup",
-								description:
-									"Una startup para startups y por el desarrollo de las startups. Nuestro éxito es el éxito de vuestra startup",
+								description: "Una startup para startups y por el desarrollo de las startups. Nuestro éxito es el éxito de vuestra startup",
 								button: "Ver más",
 								link: "/",
 							},

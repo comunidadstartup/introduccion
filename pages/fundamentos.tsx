@@ -83,8 +83,7 @@ export default function index({ social }) {
 							},
 							{
 								title: "Iniciación",
-								description:
-									"Curso de iniciación para la adecuación cultural y técnica concerniente al emprendedurismo de categoría emergente.",
+								description: "Una startup para startups y por el desarrollo de las startups. Nuestra éxito es el éxito de vuestra startup",
 								button: "Ver más",
 								link: "/iniciacion",
 							},
